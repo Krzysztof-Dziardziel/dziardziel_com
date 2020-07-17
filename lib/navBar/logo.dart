@@ -12,13 +12,13 @@ class Logo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
-      width: width * 0.1,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/navBar/signature@2x.png'),
-          fit: BoxFit.contain,
+    return Flexible(
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/navBar/signature@2x.png'),
+            fit: BoxFit.contain,
+          ),
         ),
       ),
     );
