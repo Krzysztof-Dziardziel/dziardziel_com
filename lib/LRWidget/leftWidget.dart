@@ -113,7 +113,6 @@ class LeftWidget extends StatelessWidget {
                   padding: EdgeInsets.all(10.0),
                   child: Container(
                     decoration: BoxDecoration(
-                      color: red,
                       image: DecorationImage(
                         image: AssetImage(img),
                       ),
