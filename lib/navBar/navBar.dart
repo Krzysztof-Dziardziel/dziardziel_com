@@ -19,7 +19,7 @@ class NavBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Logo(height: height, width: width),
+            Logo(),
             Container(
               child: Row(
                 children: [

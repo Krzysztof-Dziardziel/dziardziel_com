@@ -84,10 +84,12 @@ class BannerInfo extends StatelessWidget {
                 padding: EdgeInsets.all(5.0),
                 child: Text(
                   'CONTACT ME',
+                  textAlign: TextAlign.center,
                   style: GoogleFonts.roboto(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25,
-                      color: Colors.white),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 26,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             )

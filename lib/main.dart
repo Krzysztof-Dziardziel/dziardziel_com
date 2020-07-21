@@ -9,9 +9,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Krzysztof Dziardziel',
       home: HomePage(),
-      theme: ThemeData(
-        fontFamily: 'Montserrat',
-      ),
     );
   }
 }

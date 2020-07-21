@@ -22,11 +22,19 @@ class HomeBanner extends StatelessWidget {
           ),
           Container(
             width: width * 0.17,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/divider@2x.png'),
-                fit: BoxFit.fill,
-              ),
+            child: Stack(
+              children: [
+                Container(
+                  color: Colors.white,
+                ),
+                ClipPath(
+                  child: Container(
+                    width: width,
+                    color: yellow,
+                  ),
+                  clipper: HomeBannerClip(),
+                )
+              ],
             ),
           ),
           Container(

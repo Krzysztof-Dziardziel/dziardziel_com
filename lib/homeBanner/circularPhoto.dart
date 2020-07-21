@@ -11,7 +11,7 @@ class CircularPhoto extends StatelessWidget {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           image: DecorationImage(
-            image: AssetImage('assets/profile@2x.png'),
+            image: AssetImage('assets/banner/profile@2x.png'),
             fit: BoxFit.fill,
           ),
         ),
