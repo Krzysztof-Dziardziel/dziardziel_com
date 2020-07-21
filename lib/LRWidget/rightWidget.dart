@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../constants.dart';
 
 class RightWidget extends StatelessWidget {
-  RightWidget({this.logo, this.mainText, this.img, this.stack});
+  RightWidget(
+      {this.logo, this.mainText, this.img, this.stack, this.goto, this.code});
   final logo;
   final mainText;
   final img;
   final stack;
-
+  final goto;
+  final code;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -108,12 +111,72 @@ class RightWidget extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+                        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("a"),
-                            Text('B'),
+                            FlatButton(
+                              color: red,
+                              onPressed: () => launch(goto),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 10),
+                                      child: Icon(
+                                        Icons.visibility,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      'SEE IT',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            FlatButton(
+                              color: red,
+                              onPressed: () => launch(code),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(25),
+                              ),
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(4, 4, 4, 4),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 10),
+                                      child: Icon(
+                                        Icons.code,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      'CODE',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.roboto(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 20,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
