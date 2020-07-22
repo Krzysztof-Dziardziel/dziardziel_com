@@ -92,7 +92,7 @@ class BannerInfo extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
