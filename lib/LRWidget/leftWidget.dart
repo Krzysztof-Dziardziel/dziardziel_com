@@ -6,13 +6,20 @@ import '../constants.dart';
 
 class LeftWidget extends StatelessWidget {
   LeftWidget(
-      {this.logo, this.mainText, this.img, this.stack, this.goto, this.code});
+      {this.logo,
+      this.mainText,
+      this.img,
+      this.stack,
+      this.goto,
+      this.code,
+      this.isCodeDisabled = false});
   final logo;
   final mainText;
   final img;
   final stack;
   final goto;
   final code;
+  final dynamic isCodeDisabled;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -132,7 +139,7 @@ class LeftWidget extends StatelessWidget {
                               ),
                             ),
                             FlatButton(
-                              color: red,
+                              color: isCodeDisabled ? darkGray : red,
                               onPressed: () => launch(code),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
