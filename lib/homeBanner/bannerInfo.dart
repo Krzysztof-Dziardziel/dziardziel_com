@@ -24,7 +24,7 @@ class BannerInfo extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SelectableText(
+                  Text(
                     "Howdy!",
                     style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w600,
@@ -37,11 +37,9 @@ class BannerInfo extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 5),
                         child: Container(
                           width: 0.02 * width,
-                          child: Expanded(
-                            child: Divider(
-                              color: gray,
-                              thickness: 2,
-                            ),
+                          child: Divider(
+                            color: gray,
+                            thickness: 2,
                           ),
                         ),
                       ),
