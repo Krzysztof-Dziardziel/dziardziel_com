@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'LRWidget/leftWidget.dart';
 import 'LRWidget/rightWidget.dart';
 import 'NavBar/navBar.dart';
+import 'footer/footer.dart';
 import 'homeBanner/homeBanner.dart';
 
 class HomePage extends StatelessWidget {
@@ -31,14 +32,16 @@ class HomePage extends StatelessWidget {
               code: 'https://github.com/Krzysztof-Dziardziel/coffeeBook',
             ),
             LeftWidget(
-                logo: 'assets/PayR/PayR@2x.png',
-                mainText:
-                    'Process traditional bank transfers from your clients instantly.\nBy analyzing bank statements PayR tells you how much each of your clients paid in current billing period so you can save your precious time you\'d otherwise spend on doing it by hand.',
-                img: 'assets/eGalileo/imac@2x.png',
-                stack: 'js, nodejs',
-                goto:
-                    'https://github.com/Krzysztof-Dziardziel/PayR/blob/master/README.md',
-                code: 'https://github.com/Krzysztof-Dziardziel/PayR'),
+              logo: 'assets/PayR/PayR@2x.png',
+              mainText:
+                  'Process traditional bank transfers from your clients instantly.\nBy analyzing bank statements PayR tells you how much each of your clients paid in current billing period so you can save your precious time you\'d otherwise spend on doing it by hand.',
+              img: 'assets/eGalileo/imac@2x.png',
+              stack: 'js, nodejs',
+              goto:
+                  'https://github.com/Krzysztof-Dziardziel/PayR/blob/master/README.md',
+              code: 'https://github.com/Krzysztof-Dziardziel/PayR',
+            ),
+            Footer(),
           ],
         ),
       ),

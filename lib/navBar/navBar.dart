@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:dziardziel_com/constants.dart';
 import 'logo.dart';
 
 class NavBar extends StatelessWidget {
@@ -20,26 +19,26 @@ class NavBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Logo(),
-            Container(
-              child: Row(
-                children: [
-                  Text(
-                    "About me",
-                    style: TextStyle(color: gray),
-                  ),
-                  VerticalDivider(),
-                  Text(
-                    "Portfolio",
-                    style: TextStyle(color: gray),
-                  ),
-                  VerticalDivider(),
-                  Text(
-                    "Contact",
-                    style: TextStyle(color: gray),
-                  ),
-                ],
-              ),
-            )
+            // Container(
+            //   child: Row(
+            //     children: [
+            //       Text(
+            //         "About me",
+            //         style: TextStyle(color: gray),
+            //       ),
+            //       VerticalDivider(),
+            //       Text(
+            //         "Portfolio",
+            //         style: TextStyle(color: gray),
+            //       ),
+            //       VerticalDivider(),
+            //       Text(
+            //         "Contact",
+            //         style: TextStyle(color: gray),
+            //       ),
+            //     ],
+            //   ),
+            // )
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -92,7 +93,7 @@ class LeftWidget extends StatelessWidget {
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8),
-                        child: SelectableText(
+                        child: AutoSizeText(
                           mainText,
                           style: GoogleFonts.roboto(
                             fontWeight: FontWeight.w300,
