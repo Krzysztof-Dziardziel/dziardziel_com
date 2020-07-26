@@ -4,8 +4,19 @@ import 'LRWidget/rightWidget.dart';
 import 'NavBar/navBar.dart';
 import 'footer/footer.dart';
 import 'homeBanner/homeBanner.dart';
+import 'mobileVersion.dart';
 
 class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var height = MediaQuery.of(context).size.height;
+    var width = MediaQuery.of(context).size.width;
+    if (width < 800 || height < 700) return MobileVersion();
+    return LandscapeView();
+  }
+}
+
+class LandscapeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -27,15 +38,16 @@ class HomePage extends StatelessWidget {
               logo: 'assets/coffeeBook/coffeeBook@2x.png',
               mainText:
                   'Brew your coffee at its best.\nSave your brews in coffee journal, which helps you to tailor each cup exactly to your taste. Synchronize your brews across your devices to get a perfect cup of coffee wherever you are.',
-              img: 'assets/eGalileo/imac@2x.png',
+              img: 'assets/coffeeBook/coffeeBook_screens.png',
               stack: 'flutter',
               code: 'https://github.com/Krzysztof-Dziardziel/coffeeBook',
+              isSeeDisabled: true,
             ),
             LeftWidget(
               logo: 'assets/PayR/PayR@2x.png',
               mainText:
                   'Process traditional bank transfers from your clients instantly.\nBy analyzing bank statements PayR tells you how much each of your clients paid in current billing period so you can save your precious time you\'d otherwise spend on doing it by hand.',
-              img: 'assets/eGalileo/imac@2x.png',
+              img: 'assets/PayR/1x1.png',
               stack: 'js, nodejs',
               goto:
                   'https://github.com/Krzysztof-Dziardziel/PayR/blob/master/README.md',

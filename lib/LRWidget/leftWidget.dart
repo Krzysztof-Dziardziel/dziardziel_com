@@ -13,6 +13,7 @@ class LeftWidget extends StatelessWidget {
       this.stack,
       this.goto,
       this.code,
+      this.isSeeDisabled = false,
       this.isCodeDisabled = false});
   final logo;
   final mainText;
@@ -20,7 +21,8 @@ class LeftWidget extends StatelessWidget {
   final stack;
   final goto;
   final code;
-  final dynamic isCodeDisabled;
+  final bool isSeeDisabled;
+  final bool isCodeDisabled;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -108,7 +110,7 @@ class LeftWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FlatButton(
-                              color: red,
+                              color: isSeeDisabled ? darkGray : red,
                               onPressed: () => launch(goto),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),

@@ -7,13 +7,22 @@ import '../constants.dart';
 
 class RightWidget extends StatelessWidget {
   RightWidget(
-      {this.logo, this.mainText, this.img, this.stack, this.goto, this.code});
+      {this.logo,
+      this.mainText,
+      this.img,
+      this.stack,
+      this.goto,
+      this.code,
+      this.isSeeDisabled = false,
+      this.isCodeDisabled = false});
   final logo;
   final mainText;
   final img;
   final stack;
   final goto;
   final code;
+  final bool isSeeDisabled;
+  final bool isCodeDisabled;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -117,7 +126,7 @@ class RightWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             FlatButton(
-                              color: red,
+                              color: isSeeDisabled ? darkGray : red,
                               onPressed: () => launch(goto),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
@@ -149,7 +158,7 @@ class RightWidget extends StatelessWidget {
                               ),
                             ),
                             FlatButton(
-                              color: red,
+                              color: isCodeDisabled ? darkGray : red,
                               onPressed: () => launch(code),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
